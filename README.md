@@ -10,6 +10,10 @@
 
 ## 在线预览
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Astrodaw7/RotatingEarth/main/preview.gif" alt="地球旋转预览" width="600px">
+</div>
+
 你可以通过以下链接访问在线演示：
 
 [在线地球演示](https://astrodaw7.github.io/RotatingEarth/)
