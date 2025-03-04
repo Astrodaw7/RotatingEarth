@@ -90,7 +90,10 @@ function animate() {
     
     // 地球自转
     if (autoRotate) {
-        earth.rotation.y += 0.001;
+        // 计算30分钟转360度的每帧旋转角度
+        // 假设60fps，30分钟 = 1800秒，每秒60帧
+        // 360度 / (1800秒 * 60帧) = 0.003333..度/帧
+        earth.rotation.y += (Math.PI * 2) / (1800 * 60);
     }
     
     renderer.render(scene, camera);
