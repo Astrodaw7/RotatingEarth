@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Earth</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        .control-panel {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            gap: 10px;
+        }
+        #brightness-slider {
+            width: 100%;
+            margin-top: 5px;
+        }
+        .switch-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="./main.js"></script>
+    <div class="control-panel">
+        <div class="switch-container">
+            <span>自动旋转</span>
+            <label class="switch">
+                <input type="checkbox" id="auto-rotate-toggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div>
+            <label for="brightness-slider">亮度控制</label>
+            <input type="range" id="brightness-slider" min="0" max="200" value="100">
+        </div>
+    </div>
+</body>
+</html>
