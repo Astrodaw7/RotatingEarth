@@ -18,7 +18,7 @@ A 3D Earth visualization project based on Three.js with the following features:
 
 You can access the online demo through the following link:
 
-[Online Demo]([https://melonal-a.github.io/RotatingEarth)
+[Online Demo](https://melonal-a.github.io/RotatingEarth/)
 
 ## Local Setup
 
@@ -58,7 +58,7 @@ You can access the online demo through the following link:
 
 你可以通过以下链接访问在线演示：
 
-[在线演示]([https://melonal-a.github.io/RotatingEarth)
+[在线演示](https://melonal-a.github.io/RotatingEarth/)
 
 ## 本地运行
 
